@@ -3,7 +3,7 @@
 /* Variables */
 
 $color-light: #fff;
-$color-dark: #444;
+$color-dark: rgb(31, 31, 32);
 
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
@@ -16,12 +16,13 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background: $color-light;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 28, 68)), to(#440641)) fixed;
   font-family: $font-text;
   color: $color-dark;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.7;
+  padding-bottom: 50px;
 }
 
 .container {
@@ -46,18 +47,21 @@ body {
 .wrapper {
   display: flex;
   margin-left: 10px;
+  height: 700px;
 }
 
 .sidebar {
   flex: 1 0 0;
+  height: 700px;
 }
 
 .posts {
   flex: 2 0 0;
+  height: 700px;
 }
 
 .sidebar, .posts {
-  background: $color-light;
+  background: #f1f1e0;
   margin-right: 10px;
   padding: 40px;
   border: 1px solid $color-dark;
@@ -72,6 +76,7 @@ body {
   font-size: 104px;
   line-height: 1;
   text-align: center;
+  color: #ffe50b;
 }
 
 /* Lists */
@@ -91,6 +96,11 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* Authors */
 
 .authors {
@@ -103,14 +113,14 @@ body {
 
 .post {
  // display: none;
- transition-delay: 2s;
+ transition-duration: 1s;
  opacity: 0;
  height: 0;
  overflow: hidden;
   &.active {
     //display: block;
     opacity: 1;
-    height: 200px;
+    height: 100%;
   }
 }
 

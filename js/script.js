@@ -33,7 +33,7 @@
         console.log(targetArticle);
 
         /* add class 'active' to the correct article */
-        setTimeout(function () { targetArticle.classList.add('active') }, 2000);
+        setTimeout(function () { targetArticle.classList.add('active') }, 1500);
 
     }
 
