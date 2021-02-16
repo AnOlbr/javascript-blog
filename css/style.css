@@ -88,11 +88,15 @@ body {
 
 /* Post */
 .post {
-  display: none;
+  transition-delay: 2s;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .post.active {
-  display: block;
+  opacity: 1;
+  height: 200px;
 }
 
 .post-author {

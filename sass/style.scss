@@ -102,9 +102,15 @@ body {
 /* Post */
 
 .post {
-  display: none;
+ // display: none;
+ transition-delay: 2s;
+ opacity: 0;
+ height: 0;
+ overflow: hidden;
   &.active {
-    display: block;
+    //display: block;
+    opacity: 1;
+    height: 200px;
   }
 }
 
