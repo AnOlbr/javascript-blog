@@ -41,7 +41,7 @@
     optArticleAuthorSelector = '.post-author',
     optTagListSelector = '.tags.list',   //??? po co to
     optAuthorsListSelector = '.authors.list'
-  optCloudClassCount = 5,
+    optCloudClassCount = 3, //0,1,2,3
     optCloudClassPrefix = 'tag-size-';
 
 
@@ -96,7 +96,8 @@
   }
 
   function calculateTagClass(count, params) {
-
+    classNumber = Math.floor( ( (count - params.min) / (params.max - params.min) ) * optCloudClassCount + 1 );
+    return (optCloudClassPrefix + classNumber);
   }
 
 
@@ -147,7 +148,7 @@
     /* [NEW] START LOOP: for each tag in allTags: */
     for (let tag in allTags) {
       /* [NEW] generate code of a link and add it to allTagsHTML */
-      allTagsHTML += '<li><a href="#tag-' + tag + '">' + tag + ' (' + allTags[tag] + ')</a></li> ';
+      allTagsHTML += '<li><a href="#tag-' + tag + '" class="'+ calculateTagClass(allTags[tag], tagsParams) +'">' + tag + '</a></li> ';
       /* [NEW] END LOOP: for each tag in allTags: */
     }
     /*[NEW] add HTML from allTagsHTML to tagList */

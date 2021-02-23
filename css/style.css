@@ -125,4 +125,31 @@ a {
 .post-tags p {
   margin: 0 10px 0 0;
 }
+
+.tags li {
+  display: inline;
+}
+
+.tags a {
+  font-family: 'Impact';
+  font-weight: lighter;
+  padding: 0 0.5px;
+  line-height: 1;
+}
+
+.tag-size-1 {
+  font-size: 18px;
+}
+
+.tag-size-2 {
+  font-size: 20px;
+}
+
+.tag-size-3 {
+  font-size: 22px;
+}
+
+.tag-size-4 {
+  font-size: 28px;
+}
 /*# sourceMappingURL=style.css.map */
