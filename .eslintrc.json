@@ -28,4 +28,8 @@
             "off"
         ]
     }
+
+    "globals": {
+        "Handlebars": false
+      }
 }
